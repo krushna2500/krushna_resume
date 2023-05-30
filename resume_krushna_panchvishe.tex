@@ -1,0 +1,194 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+     \usepackage[svgnames]{xcolor}
+    \usepackage{hyperref}
+\definecolor{my_blue}{RGB}{10,90,178}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=my_blue,
+    filecolor=magenta,      
+    urlcolor=my_blue,
+}
+
+
+\urlstyle{same}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\vspace*{-40pt}
+
+
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+    {\Huge \scshape {Krushna Panchvishe}}\\
+    Pune, MH $\cdot$ \href{mailto:krushna.4997@gmail.com}{krushna.4997@gmail.com} $\cdot$ +91-8007123240 $\cdot$ \href{https://github.com/aakashb95}{github.com/aakashb95} \href{http://www.linkedin.com/in/aakashb95}{linkedin.com/in/aakashb95}\\
+\end{center}
+% \begin{center}
+% 	{\Large \scshape {Aakash Bakhle}}\\
+% \end{center}
+% \begin{left}
+%     Pune, MH $\cdot$ \href{mailto:aakashbakhle@gmail.com}{aakashbakhle@gmail.com} $\cdot$ +91-8007123240 $\cdot$
+% \end{left}
+% \begin{right}
+% 	 \href{https://github.com/aakashb95}{github.com/aakashb95} \href{http://www.linkedin.com/in/aakashb95}{linkedin.com/in/aakashb95}
+%  \end{right}\\
+
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+\textbf{Centre for Development of Advanced Computing (C-DAC)} \hfill Pune\\
+\textit{Project Engineer (DevOps/MLOps) - Applied AI Group} \hfill Oct 2021 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Collaborated with cross-functional teams to establish and enhance CI/CD pipelines, resulting in faster and more reliable software releases.
+    \item Implemented infrastructure automation using Ansible, reducing manual provisioning time by \textbf{60\%}.
+    \item Orchestrated containerization with Docker, Docker Swarm/Kubernetes, optimizing application deployment and scaling processes.
+    \item Developed and maintained scripts for various automation tasks, resulting in improved efficiency and reduced human error.
+    \item Collaborated with development teams to optimize build processes and improve code quality using code analysis and testing tools.
+    \item Worked on automated VAPT(SAST) report generation and guided teams to resolve them. 
+    % \item Generated synthetic data catering to Indian demography, trained \href{https://github.com/anhaidgroup/deepmatcher}{DeepMatcher} on said data to identify potential duplicates in real-world data. \textbf{Reduced comparisons by 98\%} by using phonetic similarity and blocking mechanisms.
+    \item Managed Gitlab(EE) Administration for whole project. i.e. finalizing folder structure, account management, branching strategies, etc.
+    \item Used Nginx as a load balancer and reverse proxy.
+    \item Setup and Implementation of centralised repository management tools from scratch like Nexus, JFrog, Container and package registries in Gitlab EE.
+    % \item 
+          % 	Entities and relations are stored in graph database.
+    %\item Implemented perspective based sentiment analysis using Zero Shot Learning. Explanation can be found \href{ https://twitter.com/aakashb_95/status/1491459132897263617?s=20&t=wXTHKhBcILYE4LebSDFZlQ}{here}.
+          % 	\item Trained a Named Entity Recognition model using SpaCy. Used RoBERTa-base model on a \textbf{custom dataset in BIO format to achieve an F1 score of 84.9\%} on 20 tags (Ontonotes5.0 + two custom tags).
+\end{itemize}
+
+\vspace*{2mm}
+
+%==== Education ====%
+\header{Education}
+\textbf{Centre for Development of Advanced Computing (C-DAC)}\hfill Pune\\
+PG Diploma Artificial Intelligence - \textit{Grade: A} \hfill Mar 2021 - Sep 2021\\
+\vspace{2mm}
+\textbf{Bhivarabai Sawant Institute of Technology and Research}\hfill Pune\\
+B.E. Computer Engineering - \textit{72\%} \hfill Aug 2014 - Jul 2018\\
+\vspace{2mm}
+
+\header{Projects}
+
+% ----------------------------
+
+{\textbf{Cancer Detection using Gene Expression}}
+%{\sl ESP8266, C++, Arduino IDE} \\
+\begin{itemize} \itemsep 1pt
+          % \item Analyzed gene expression sequences from The Cancer Genome Atlas (TCGA) database for 33 different Cancer types and Solid Tissue Normals.
+    \item Analyzed and batch processed zip files from The Cancer Genome Atlas (TCGA) database using python scripts to create a csv file containing \textbf{60,000 features and 11,000 rows}, where each feature represented a unique gene and each row was a unique patient.
+          % Performed EDA, tested hypothesis to find relations between a particular gene and cancer type. 
+          % % \item Obtained insights about gene behaviour/activity-inactivity and validated existing facts(one to many relation of genes to cancer) using statistical techniques.
+          % \item Reduced features using PCA, Cosine Similarity and UMAP.
+    \item Designed a voting classifier based on PCA+CNN, Cosine Similarity+XGBoost, UMAP+LGBM to obtain a robust binary classifier which had an \textbf{f1-score of 0.98} and \textbf{accuracy of 0.97} .
+          \\
+\end{itemize}
+\vspace*{2mm}
+
+%----------------- CMM --------------------
+\href{https://github.com/aakashb95/car-detection}{\textbf{Car make and model detection}}
+%{\sl FastAi, PyTorch} 
+%\hfill \url{https://github.com/aakashb95/car-detection}\\
+\begin{itemize} \itemsep 1pt
+    \item Built an image classification model using FastAi to detect make and model of a car based on Stanford Car dataset consisting of 16000 images of 196 different classes.
+          % \item Model trained on the Stanford Car dataset consisting of 16000 images of 196 different classes.
+    \item Dockerized the application and deployed it on an Azure compute instance and AWS Fargate.
+\end{itemize}
+\vspace*{2mm}
+%-----------------------------------
+
+%=========== WiFi Switch ============
+% {\textbf{ESP8266 WiFi switch [WIP]}} 
+% %{\sl ESP8266, C++, Arduino IDE} \\
+% \begin{itemize} \itemsep 1pt
+% \item Used ESP8266 to connect to an MQTT server using Wi-Fi to control a tubelight.
+% \item Implemented Wi-Fi modules and added a functionality to take input from an Infrared remote if Wi-Fi stops working.
+% \\
+% \end{itemize}
+% \vspace*{2mm}
+%===================================
+
+%--languages and technologies--%
+\header{Languages and Technologies}
+\begin{itemize}
+    \item Python
+          % \item Oracle SQL, ArangoDB
+    \item Numpy, Pandas, Scikit-learn, Pytorch, SpaCy, HuggingFace
+    \item Git, FastAPI, Streamlit, Docker
+\end{itemize}
+
+%\begin{tabular}{ l l }
+%	Programming Languages: & C++, Python                         \\
+%	Database:              & Oracle SQL, MySQL                          \\
+%	Frameworks:            & PyTorch, FastAi                            \\
+%	Libraries:             & Numpy, Pandas, scikit-learn                \\
+%	Tools:                 & Git, AWS (EC2), Azure (Compute, ML studio) \\
+%\end{tabular}
+\vspace{2mm}
+
+\
+\end{document}
